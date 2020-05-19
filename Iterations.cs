@@ -53,7 +53,7 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> StringyIndexes(List<string> data)
         {
-            var indexOfString = data.Select((data, indexNumber) => $"{data} is at index {indexNumber}");
+            var indexOfString = data.Select((data, index) => $"{data} is at index {index}");
 
             return indexOfString;
         }
@@ -67,7 +67,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var evenNumbers = data.Where(number => number % 2 == 0);
+
+            return evenNumbers;
         }
 
 
