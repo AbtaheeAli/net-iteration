@@ -124,7 +124,7 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> data)
         {
-            var theNeedle = data.Single(oneString => oneString.Contains("needle"));
+            var theNeedle = data.Find(oneString => oneString.Contains("needle"));
 
             return theNeedle;
         }
@@ -137,7 +137,10 @@ namespace DotnetIteration
         // 
         public static int FindTheNeedleIndex(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var theNeedleFound = data.FindIndex(oneString => oneString.Contains("needle"));
+
+
+            return theNeedleFound;
         }
 
 
