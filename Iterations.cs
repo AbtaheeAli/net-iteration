@@ -102,10 +102,6 @@ namespace DotnetIteration
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year)
         {
             return data.Where(movie => movie.Year == year && movie.Score > 90).Select(movie => movie.Name);
-
-
-
-
         }
 
 
@@ -115,7 +111,9 @@ namespace DotnetIteration
         // 
         public static bool EveryoneIsOdd(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var oddNumbers = data.All(number => number % 2 == 1);
+
+            return oddNumbers;
         }
 
 
