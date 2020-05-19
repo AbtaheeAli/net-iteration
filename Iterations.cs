@@ -124,7 +124,9 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var theNeedle = data.Single(oneString => oneString.Contains("needle"));
+
+            return theNeedle;
         }
 
 
