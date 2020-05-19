@@ -80,7 +80,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var evenIndex = data.Where((data, index) => index % 2 == 0);
+
+            return evenIndex;
         }
 
 
@@ -99,7 +101,11 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year)
         {
-            throw new System.NotImplementedException();
+            return data.Where(movie => movie.Year == year && movie.Score > 90).Select(movie => movie.Name);
+
+
+
+
         }
 
 
