@@ -53,8 +53,12 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> StringyIndexes(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var indexOfString = data.Select((data, indexNumber) => $"{data} is at index {indexNumber}");
+
+            return indexOfString;
         }
+
+
 
 
         // 
